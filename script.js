@@ -14,7 +14,7 @@ let r = [];
 let img = [];
 let santa = [];
 let startImg = 1;
-let indicator = 2;
+let indicator = 1;
 
 
 
