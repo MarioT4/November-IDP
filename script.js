@@ -3,8 +3,10 @@ let song;
 // let loadSound;  
 let date1 = "Dec, 24 2022 24:00:00";
 let date2 = "Jun, 20 2022 24:00:00";
-let thing = "Christmas"
+let thing1 = "Christmas"
+let thing2 = "Summer"
 let countDownDate1 = new Date(date1).getTime();
+let countDownDate2 = new Date(date2).getTime();
 let currentDate = new Date();
 let x = [];
 let y = [];
@@ -12,7 +14,7 @@ let r = [];
 let img = [];
 let santa = [];
 let startImg = 1;
-let indicator = 1;
+let indicator = 2;
 
 
 
@@ -85,7 +87,7 @@ function draw() {
   let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
   frameRate(10);
   removeElements();
-  p.innerHTML = days + " days " + hours + " hours " + minutes + " minutes and " + seconds + "  seconds left until " + thing;
+  p.innerHTML = days + " days " + hours + " hours " + minutes + " minutes and " + seconds + "  seconds left until " + thing1;
 //Chimney smoke loop
   for (let i = 0; i < 1000; i = i + 1) {
     push();
@@ -109,7 +111,26 @@ function draw() {
 }
 }
 if (indicator == 2) {
+ background('DarkTurquoise')
+ let p = document.getElementById('long');
+  let p2 = document.getElementById('short');
+  currentDate = new Date();
+  let timeleft = countDownDate2 - currentDate;
+noStroke();
 
+fill('black')
+  ellipse(210,175.5, 947, 93)
+
+  fill('AntiqueWhite')
+  ellipse(371.5, 407.5, 1563, 153);
+
+ let days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+  frameRate(10);
+  removeElements();
+  p.innerHTML = days + " days " + hours + " hours " + minutes + " minutes and " + seconds + "  seconds left until " + thing2;
 }
 
 
@@ -143,5 +164,13 @@ if(key === "p") {
 }
 if(key === 's') {
   song.stop();
+}
+if(key === '1'){
+  indicator = 1
+  redraw();
+}
+if(key === '2'){
+  indicator = 2
+  redraw();
 }
 }
