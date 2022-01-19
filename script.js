@@ -25,7 +25,7 @@ function preload() {
   song = loadSound ("snow.mp3")
 }
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400, 400);
 
 //  song = loadSound ("./snow.mp3")
   // song.play();
@@ -106,7 +106,7 @@ function draw() {
   // } 
  
   //image(img, 200, 250);
-  image(img, 400, 250, img.width * 2, img.height * 2);
+  image(img, 200, 250, img.width * 2, img.height * 2);
   image(img2, 300, 330, img.width *1.2, img.height * 1.15);
 }
 }
@@ -117,9 +117,20 @@ if (indicator == 2) {
   currentDate = new Date();
   let timeleft = countDownDate2 - currentDate;
 noStroke();
-
-fill('black')
+fill('LightSeaGreen')
+ellipse(87.5, 234.5,225,99)
+fill('LightSeaGreen')
   ellipse(210,175.5, 947, 93)
+fill('Aquamarine')
+ellipse(102,280,362,142)
+fill('Aquamarine')
+ellipse(318,234,332,106)
+
+fill('LightCyan')
+ellipse(203.5,313.25,565,128.5)
+fill('LightCyan')
+ellipse(333,277,362,142)
+
 
   fill('AntiqueWhite')
   ellipse(371.5, 407.5, 1563, 153);

@@ -1,0 +1,1 @@
+I used a lot of variables to do many different things. I didn't create y own functions but I made use of preload setup draw and key pressed. I used an if indicator as a conditional but thats it. I used alot of empty arrays to create effects like snow and smoke. I used loops to create some effects. I did not use objects in this project.
